@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans:wght@400;600&display=swap');
+
+
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray: #333;
+    --color-primary: #E8E8E8;
+    --color-secondary: #5474FD;
+    --color-dark: #232323;
+    --color-grey-lt: #999999;
+
+    --bg-dark: #232323;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.bg--pirple {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+/* main style */
+
+body {
+    font-family: 'Aleo', sans-serif;
+    font-weight: 400;
+    color: var(--color-primary);
+    min-width: 320px;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.ff-josefin {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+/* HEADER TOP*/
+
+.header-top {
+    background: url(../img/header/Header.jpg) no-repeat center;
+    background-size: cover;
+    padding: 264px 0 134px;
+    text-align: center;
+}
+
+.header-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 4.8px;
+    text-align: center;
+}
+
+.header-subtitle {
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 6.82px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.header-form {
+    display: flex;
+    justify-content: center;
+    max-width: 650px;
+    margin: 0 auto 108px auto;
+    background: #fff;
+}
+
+.header-input {
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 2.8px;
+    color: var(--color-grey-lt);
+    width: 500px;
+    padding: 17px 10px 17px 111px;
+    outline: none;
+    border: 2px solid transparent;
+    transition: 0.4s ease-in-out;
+}
+
+.header-input:focus {
+    border: 2px solid var(--color-grey-lt);
+}
+
+::placeholder {
+    font-family: 'Josefin Sans';
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 2.8px;
+    color: var(--color-grey-lt);
+}
+
+.header-btn {
+    color: var(--color-white);
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    width: 150px;
+    background-color: var(--color-secondary);
+    background-image: url(../img/header/search.png);
+    background-repeat: no-repeat;
+    background-position: right 19px center;
+    text-align: left;
+    padding: 19px 0px 15px 35px;
+    border: 2px solid var(--color-white);
+}
+
+.header-scroll {
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 2.8px;
+    color: var(--color-white);
+    text-align: center;
+    width: 108px;
+    height: 46px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    transition: 0.4s ease-in-out;
+}
+
+.header-scroll::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 8px;
+    left: 50%;
+    top: 50%;
+    background-image: url(../img/header/arrow-down.svg);
+    transform: translateX(-50%);
+    animation: move 1.5s ease-in-out infinite;
+}
+
+.header-scroll:hover {
+    /* color: grey; */
+}
+
+@keyframes move{
+    0%{
+        top: 53%;
+    }
+    25%{
+        top: 56%;
+    }
+    50%{
+        top: 58%;
+    }
+    75%{
+        top: 56%;
+    }
+    100%{
+        top: 53%;
+    }
+}
+
+/* HEADER BOTTOM */
+.mobile-burger {
+    display: none;
+}
+
+.header-bottom-block {
+    height: 80px;
+}
+
+.header-bottom {
+    background: #5474FD;
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 80px;
+    transform: translate(0, -80px);
+}
+
+.isVuew {
+    transform: translate(0, 0);
+    transition: 0.4s ease-in-out;
+}
+
+.header-wraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: 2.4px;
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 24px;
+}
+
+.header-logo:hover {
+    color: grey;
+    transition: 0.1s ease-in-out;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu-item {
+    font-size: 14px;
+    margin-right: 40px;
+}
+
+.menu-item:last-child {
+    margin-right: 0;
+}
+
+.menu-link {
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu-link:hover {
+    color: grey;
+    transition: 0.5s ease;
+}
+
+/* chose block */
+.chose {
+    background: url(../img/chose/chose-bg.png) no-repeat center;
+    background-size: cover;
+    padding: 118px 0 117px 0;
+}
+
+.chose-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 31px;
+    flex-wrap: wrap;
+}
+
+.chose-description {
+    max-width: 560px;
+    padding-top: 94px;
+}
+
+.chose-title {
+    font-size: 36px;
+    line-height: 26px;
+    color: var(--color-white);
+    margin-bottom: 50px;
+}
+
+.chose-subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 1.6px;
+    color: var(--color-white);
+    margin-bottom: 45px;
+}
+
+.chose-btn {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    text-transform: uppercase;
+    width: 228px;
+    padding: 21px 0;
+}
+
+.chose-btn:hover {
+    color: var(--color-grey-lt);
+    border: 2px solid var(--color-grey-lt);
+    transition: 0.2s ease-in-out;
+}
+
+.chose-photos {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    align-items: center;
+    gap: 10px;
+}
+
+.chose-photos figure {
+    width: 350px;
+}
+
+.chose-photos figure:first-child {
+    margin-right: 90px;
+}
+
+.chose-photos figure:last-child {
+    margin-left: 90px;
+}
+
+/* works blcok */
+
+.works {
+    background-color: var(--color-gray);
+    background-image: url(../img/works-circule.png);
+    background-repeat: no-repeat;
+    background-position: left 50% top 48px;
+    padding: 80px 0 97px 0;
+}
+
+.selection h3 {
+    font-size: 36px;
+    line-height: 26px;
+    color: var(--color-primary);
+}
+
+.works-container-wraper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.selection figure {
+    margin-bottom: 37px;
+    width: 99px;
+    height: 99px;
+    background: var(--color-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .selection:nth-child(2) figure {
+    position: relative;
+} */
+
+
+/* booking block */
+
+.apartment-block {
+    background: url(../img/booking/apartments.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 229px;
+    padding-bottom: 100px;
+}
+
+.apartment,
+.mountains {
+    width: 543px;
+    background: #232323d9;
+    padding: 47px 2px 49px 28px;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.booking-title {
+    letter-spacing: 1.5px;
+}
+
+.booking-title-second {
+    margin: 23px 0 13px;
+}
+
+.booking-subtitle {
+    font-size: 16px;
+    margin-bottom: 46px;
+}
+
+.booking-container-btn {
+    background: var(--color-secondary);
+    width: 228px;
+    padding: 21px 0 16px 0;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.booking-container-btn:hover {
+    color: var(--color-grey-lt);
+    border: 2px solid var(--color-grey-lt);
+}
+
+.mountains-block {
+    background: url(../img/booking/mountains.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 229px;
+    padding-bottom: 100px;
+}
+
+.mountains-block .booking-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* testimonial block */
+
+.testimonial-block {
+    background: url(../img/testimonial/testimonial-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 128px 10px 200px;
+}
+
+
+.testimonial-title {
+    font-size: 36px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 91px;
+}
+
+.testimonial-description {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-description figure img {
+    height: 100%;
+}
+
+.testimonial-block-text {
+    width: 668px;
+    background: var(--color-gray);
+    padding: 47px 24px 39px 63px;
+}
+
+.testimonial-block-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 26px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.testimonial-block-subtitle {
+    position: relative;
+    font-size: 16px;
+    line-height: 26px;
+    text-indent: 30px;
+}
+
+.testimonial-block-subtitle::before {
+    content: '';
+    background: url(../img/quote-left-solid.svg) no-repeat left center;
+    width: 34px;
+    height: 29px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+/* footer */
+
+.footer {
+    background: #232323;
+}
+
+.footer-description {
+    text-align: center;
+}
+
+.footer-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: 3.36px;
+    text-transform: uppercase;
+    padding-top: 122px;
+    padding-bottom: 8px;
+}
+
+.footer-subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 1.6px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foter-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 53px;
+}
+
+.footer-item {
+    display: block;
+}
+
+.facebook {
+    width: 39px;
+    height: 26px;
+    fill: var(--color-primary);
+}
+
+.facebook:hover {
+    fill: var(--color-secondary);
+}
+
+.twitter {
+    width: 45px;
+    height: 26px;
+    fill: var(--color-primary);
+}
+
+.twitter:hover {
+    fill: var(--color-secondary);
+}
+
+.linkedin {
+    width: 45px;
+    height: 26px;
+    fill: var(--color-primary);
+}
+
+.linkedin:hover {
+    fill: var(--color-secondary);
+}
+
+.youtube {
+    width: 47px;
+    height: 26px;
+    fill: var(--color-primary);
+}
+
+.youtube:hover {
+    fill: var(--color-secondary);
+}
+
+.pinterest {
+    width: 44px;
+    height: 26px;
+    fill: var(--color-primary);
+}
+
+.pinterest:hover {
+    fill: var(--color-secondary);
+}
